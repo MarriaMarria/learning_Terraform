@@ -1,0 +1,14 @@
+$ terraform plan -out=newplan
+
+# Saving an execution plan with the out flag ensures your terraform apply operation runs the exact plan rather than applying new changes you may not have approved.
+
+after terraform apply "newplan" we can run terraform show to see the new values associated with the resource group (eg see the changes)
+
+## to create a VM we have to first crreate the following resources:
+
+Resource group
+Virtual network
+Subnet
+Network security group
+Network interface
+Your deployment will also include a public IP address as well as an explicitly opened port 22 for SSH access.
